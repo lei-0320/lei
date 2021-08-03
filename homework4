@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug  3 15:16:44 2021
+
+@author: apple
+"""
+l=list(input('the number what you wanna insert:'))
+from itertools import permutations
+def largest(l):
+    lst = []
+    for i in permutations(l, len(l)):
+        lst.append("".join(map(str,i)))
+    return max(lst)
+print('the largest number is ',largest(l))
